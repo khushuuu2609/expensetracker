@@ -1,7 +1,10 @@
 const mongoose = require('mongoose')
 const { Schema } = mongoose;
 
+
+//created model(Schema) for the User collection in database
 const UserSchema = new Schema({
+    //fields to be added in collection
     uid: {
         type: Number,
         required: true,
@@ -20,4 +23,6 @@ const UserSchema = new Schema({
         required: true
     }
 });
+
+//exporting the model module
 module.exports = mongoose.model('users', UserSchema)
